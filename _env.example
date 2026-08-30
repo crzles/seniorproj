@@ -1,0 +1,12 @@
+this is an example template with placeholder values 
+to know what they need to fill in:
+
+DB_HOST=localhost
+DB_PORT=5432(or whichever port number your local postgresql is using)
+DB_NAME=medtracker
+DB_USER=postgres
+DB_PASSWORD=your_password_here
+GOOGLE_PLACES_API_KEY=your_key_here
+JWT_SECRET=your_secret_here
+
+....this is an example of you .env file
