@@ -1,16 +1,16 @@
-* INSTALLMENTS MAY DIFFER FOR A MAC DEVICE *
+* INSTALLMENTS MAY DIFFER FOR A MAC DEVICE, THIS GUIDE IS BASED ON WINDOWS*
 
 1. Install VS Code
 
 2. Install Git + Git Bash:
     https://git-scm.com/install/
-    congigure in the bash terminal on vs code:
+    configure in the bash terminal on vs code:
     git config --global user.name "Your Name"
     git config --global user.email "your.github.email@example.com"
 
 3. Download Build Tools for Visual Studio(this is the compiler for the project):
     https://visualstudio.microsoft.com/downloads/
-    in the insaller check ""Desktop development with C++"
+    in the installer check ""Desktop development with C++"
     CMake will be checked as well automatically, it's needed for compiling
 
 4. Install PostgreSQL:
@@ -40,3 +40,15 @@
             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ this should be what was returned in step 5
     click OK out of everything then close and open again a new terminal
     test it out: drogon_ctl version
+
+7. CMake Kit selction:
+    reopen project folder on vscode
+    open the command palette -> ctrl + shift + P
+    type CMake: Configure and select
+    a dropdown will appear, click "scan for kits"
+    click on something like "Windows Build Tools 202X Release -amd64"
+    configure will run automatically, if succesful will say "Build files written to: .../backend/build"
+
+    confirm it compiles -> ctrl + shift + P
+    click on CMake:Build
+    should finish compiling with exit code 0 and no errors
