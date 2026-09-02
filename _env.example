@@ -1,5 +1,5 @@
 this is an example template with placeholder values 
-to know what they need to fill in:
+to know what they need to fill in, this .env file lives in the backend folder:
 
 DB_HOST=localhost
 DB_PORT=5432(or whichever port number your local postgresql is using)
@@ -9,4 +9,12 @@ DB_PASSWORD=your_password_here
 GOOGLE_PLACES_API_KEY=your_key_here
 JWT_SECRET=your_secret_here
 
-....this is an example of you .env file
+^^^^^^^^
+....this is an example of your .env file
+
+add the following into your .gitignore file that lives in the root of project:
+    .DS_Store
+    backend/build/
+    backend/.env
+    frontend/.env
+    *.env
