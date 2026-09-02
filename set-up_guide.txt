@@ -1,0 +1,42 @@
+* INSTALLMENTS MAY DIFFER FOR A MAC DEVICE *
+
+1. Install VS Code
+
+2. Install Git + Git Bash:
+    https://git-scm.com/install/
+    congigure in the bash terminal on vs code:
+    git config --global user.name "Your Name"
+    git config --global user.email "your.github.email@example.com"
+
+3. Download Build Tools for Visual Studio(this is the compiler for the project):
+    https://visualstudio.microsoft.com/downloads/
+    in the insaller check ""Desktop development with C++"
+    CMake will be checked as well automatically, it's needed for compiling
+
+4. Install PostgreSQL:
+    https://www.postgresql.org/download/
+    IMPORTANT: remember the password you set for the postgres user
+    in the pgAdmin db tool create a new database named medtracker
+
+4. Install vcpkg + Drogon + libpqxx in bash or powershell terminal:
+    git clone https://github.com/microsoft/vcpkg.git C:\vcpkg
+    cd C:\vcpkg
+    .\bootstrap-vcpkg.bat
+    .\vcpkg install drogon[ctl, postgres]:x64-windows (drogon:'may be different based on your device')
+    .\vcpkg install libpqxx:x64-windows (libpqxx:'may be different based on your device')
+    .\vcpkg integrate install
+ vcpkg is a package manager for cpp kind of like pip for python and npm for node
+ drogon is the framework for the project
+ libpqxx is the library that allows cpp code communicate with PostgreSQL
+
+5. After installment test out with terminal commmand: drogon_ctl version 
+ if command not found run: find /c/vcpkg/installed -iname "drogon_ctl*"
+ that should return something like this: /c/vcpkg/installed/x64-windows/tools/drogon/drogon_ctl.exe
+
+6. add the folder directory to your PATH:
+    Start Menu -> search "enviorment variable" -> click "edit enviorment variables for..."
+    under User Variable click PATH -> edit -> new
+    paste: C:\vcpkg\installed\x64-windows\tools\drogon (mine may look different to yours)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ this should be what was returned in step 5
+    click OK out of everything then close and open again a new terminal
+    test it out: drogon_ctl version
