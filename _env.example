@@ -1,5 +1,5 @@
 this is an example template with placeholder values 
-to know what they need to fill in, this .env file lives in the backend folder:
+to know what they need to fill in, this is located at backend/.env:
 
 DB_HOST=localhost
 DB_PORT=5432(or whichever port number your local postgresql is using)
