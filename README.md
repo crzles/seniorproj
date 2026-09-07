@@ -23,7 +23,3 @@ our own interaction dataset. If a possible interaction is found, the application
 This will allow users to find nearby pharmacies when they need to refill a medication. These features will be connected to the user's account so their information can be managed in one 
 place. 
 
-To determine if our application is working correctly, we will test each of the main features individually and together. We will test adding and editing medications, setting schedules, 
-receiving reminders, recording symptoms, checking for interactions, and finding nearby pharmacies. We will also test incorrect or missing information to make sure the system responds 
-properly. In addition to functional testing, we will have users test the application to see if the features are easy to understand and navigate. Our goal is for the main features to 
-work correctly and for users to be able to complete common tasks without difficulty. 
